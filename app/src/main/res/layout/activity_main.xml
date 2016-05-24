@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--creating a linear layout better suited for this apllication-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2be9e"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+        <!-- Top Row -->
+        <!-- add id so that when app starts user can draw instantly -->
+
+
+        <LinearLayout
+            android:id="@+id/paint_colors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#000000"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#000000" />
+
+
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#ff0900"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#ff0900" />
+
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#ffee00"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#ffee00" />
+
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#00ff2f"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#00ff2f" />
+
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#FF009900"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#FF009900" />
+
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#FF009999"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#FF009999" />
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#8a0099"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#8a0099" />
+            <Button
+                android:layout_width="@dimen/large_brush"
+                android:layout_height="@dimen/large_brush"
+                android:layout_margin="2dp"
+                android:background="#99001f"
+                android:contentDescription="@string/paint"
+                android:onClick="paintClicked"
+                android:tag="#99001f" />
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="EraseScreen"
+                android:text="Erase"/>
+        </LinearLayout>
+        <edu.pitt.cs.cs1635.arm136.sribble.ScribbleView
+            android:id="@+id/makeScribble"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF" />
+    </LinearLayout>
+</LinearLayout>
